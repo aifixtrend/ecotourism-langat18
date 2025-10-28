@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Korporat & Hab Eko-Pelancongan | Dataran Rekreasi Batu 18, Hulu Langat</title>
+    
+    <!-- Memuatkan Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Memuatkan fon Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Menggunakan fon Inter sebagai fon utama */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Menambah 'smooth scrolling' untuk navigasi */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Animasi spinner untuk loading */
+        .loader {
+            border: 4px solid #f3f3f3; /* Light grey */
+            border-top: 4px solid #16a34a; /* Green */
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900 bg-gray-50">
+
+    <!-- Header & Navigasi -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center p-4 px-6">
+            <!-- Logo (Placeholder) -->
+            <a href="#hero" class="text-2xl font-bold text-green-700">
+                EcoHuluLangat
+            </a>
+            
+            <!-- Navigasi Desktop -->
+            <nav class="hidden md:flex space-x-6">
+                <a href="#tentang-kami" class="text-gray-600 hover:text-green-600 transition duration-300">Tentang Kami</a>
+                <a href="#projek" class="text-gray-600 hover:text-green-600 transition duration-300">Projek Pemuliharaan</a>
+                <a href="#eko-pelancongan" class="text-gray-600 hover:text-green-600 transition duration-300">Eko-Pelancongan</a>
+                <a href="#aktiviti" class="text-gray-600 hover:text-green-600 transition duration-300">Aktiviti & Acara</a>
+                <a href="#produk" class="text-gray-600 hover:text-green-600 transition duration-300">Produk & Tempahan</a>
+                <a href="#galeri" class="text-gray-600 hover:text-green-600 transition duration-300">Galeri</a>
+                <a href="#rakan-kongsi" class="text-gray-600 hover:text-green-600 transition duration-300">Rakan Kongsi</a>
+                <a href="#hubungi" class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition duration-300">Hubungi Kami</a>
+            </nav>
+            
+            <!-- Butang Menu Mudah Alih -->
+            <button id="menu-btn" class="md:hidden text-gray-700 hover:text-green-600">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+        
+        <!-- Menu Mudah Alih (Tersembunyi secara lalai) -->
+        <div id="menu" class="hidden md:hidden bg-white shadow-lg">
+            <a href="#tentang-kami" class="block px-6 py-3 text-gray-600 hover:bg-green-50">Tentang Kami</a>
+            <a href="#projek" class="block px-6 py-3 text-gray-600 hover:bg-green-50">Projek Pemuliharaan</a>
+            <a href="#eko-pelancongan" class="block px-6 py-3 text-gray-600 hover:bg-green-50">Eko-Pelancongan</a>
+            <a href="#aktiviti" class="block px-6 py-3 text-gray-600 hover:bg-green-50">Aktiviti & Acara</a>
+            <a href="#produk" class="block px-6 py-3 text-gray-600 hover:bg-green-50">Produk & Tempahan</a>
+            <a href="#galeri" class="block px-6 py-3 text-gray-600 hover:bg-green-50">Galeri</a>
+            <a href="#rakan-kongsi" class="block px-6 py-3 text-gray-600 hover:bg-green-50">Rakan Kongsi</a>
+            <a href="#hubungi" class="block px-6 py-3 text-gray-600 hover:bg-green-50">Hubungi Kami</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- Bahagian Hero -->
+        <section id="hero" class="h-[70vh] bg-cover bg-center relative" style="background-image: url('https://placehold.co/1600x900/4CAF50/FFFFFF?text=Keindahan+Semulajadi+Hulu+Langat');">
+            <!-- Overlay Gelap -->
+            <div class="absolute inset-0 bg-black/50"></div>
+            
+            <div class="relative h-full flex flex-col justify-center items-center text-center text-white p-6">
+                <h1 class="text-4xl md:text-6xl font-bold mb-4 drop-shadow-lg">Selamat Datang ke Dataran Rekreasi Batu 18</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-2xl drop-shadow-md">Menghubungkan Komuniti dengan Alam Semulajadi Melalui Pemuliharaan dan Eko-Pelancongan Mampan.</p>
+                <a href="#tentang-kami" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg text-lg transition duration-300 shadow-lg">Terokai Lebih Lanjut</a>
+            </div>
+        </section>
+
+        <!-- Bahagian Tentang Kami (Profil Korporat) -->
+        <section id="tentang-kami" class="py-20 px-6 bg-white">
+            <div class="container mx-auto md:flex md:space-x-12 items-center">
+                <!-- Imej -->
+                <div class="md:w-1/2">
+                    <img src="https://placehold.co/600x400/2E7D32/FFFFFF?text=Pasukan+Kami" alt="Pasukan kami di tapak projek" class="rounded-xl shadow-lg w-full">
+                </div>
+                <!-- Teks -->
+                <div class="md:w-1/2 mt-8 md:mt-0">
+                    <span class="text-sm font-semibold text-green-600 uppercase">Profil Korporat</span>
+                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-6">Misi Kami: Memulihara Warisan Alam Hulu Langat</h2>
+                    <p class="text-gray-700 text-lg mb-4">
+                        Kami adalah organisasi yang berdedikasi untuk pemuliharaan alam sekitar di Hulu Langat. Misi kami adalah untuk melindungi biodiversiti unik di kawasan ini sambil mempromosikan eko-pelancongan yang bertanggungjawab.
+                    </p>
+                    <p class="text-gray-700 text-lg mb-6">
+                        Melalui kerjasama dengan komuniti setempat dan rakan kongsi korporat, kami berusaha untuk menjadikan Dataran Rekreasi Batu 18 sebagai model hub eko-pelancongan mampan yang memberi manfaat kepada alam sekitar dan ekonomi tempatan.
+                    </p>
+                    <a href="#projek" class="text-green-600 font-semibold hover:underline">Lihat projek kami →</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bahagian Projek Pemuliharaan (Portfolio) -->
+        <section id="projek" class="py-20 px-6 bg-gray-50">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Portfolio Projek Pemuliharaan Kami</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12">Beberapa inisiatif utama yang telah kami jalankan untuk melindungi dan memulihara ekosistem tempatan.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Kad Projek 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-105 duration-300">
+                        <img src="https://placehold.co/400x300/388E3C/FFFFFF?text=Pemulihan+Denai+Hutan" alt="Pemulihan Denai Hutan" class="h-56 w-full object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-semibold mb-2">Pemulihan Denai Hutan</h3>
+                            <p class="text-gray-600">Memperbaiki dan menyelenggara denai-denai hutan untuk akses yang selamat dan terkawal, mengurangkan hakisan tanah.</p>
+                        </div>
+                    </div>
+                    <!-- Kad Projek 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-105 duration-300">
+                        <img src="https://placehold.co/400x300/689F38/FFFFFF?text=Program+Penanaman+Semula" alt="Program Penanaman Semula" class="h-56 w-full object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-semibold mb-2">Program Penanaman Semula</h3>
+                            <p class="text-gray-600">Menanam lebih 1,000 pokok asli di kawasan tebing sungai untuk menstabilkan tanah dan memulihkan habitat.</p>
+                        </div>
+                    </div>
+                    <!-- Kad Projek 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transition transform hover:scale-105 duration-300">
+                        <img src="https://placehold.co/400x300/7CB342/FFFFFF?text=Kesedaran+Komuniti" alt="Kesedaran Komuniti" class="h-56 w-full object-cover">
+                        <div class="p-6 text-left">
+                            <h3 class="text-xl font-semibold mb-2">Kempen Kesedaran Komuniti</h3>
+                            <p class="text-gray-600">Menganjurkan bengkel dan program 'gotong-royong' untuk mendidik orang ramai tentang kepentingan menjaga kebersihan sungai.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bahagian Aktiviti & Acara (BARU) -->
+        <section id="aktiviti" class="py-20 px-6 bg-gray-50">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Aktiviti & Acara Akan Datang</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12">Sertai kami dalam program-program menarik yang dirancang untuk komuniti dan pelawat.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Acara 1 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 duration-300">
+                        <img src="https://placehold.co/400x300/81C784/FFFFFF?text=Bengkel+Alam" alt="Bengkel Alam" class="h-56 w-full object-cover">
+                        <div class="p-6 text-left">
+                            <span class="text-sm font-semibold text-green-600">BENGKEL | 15 NOV 2025</span>
+                            <h3 class="text-xl font-semibold my-2">Bengkel Pengenalan Herba Hutan</h3>
+                            <p class="text-gray-600 mb-4">Belajar mengenali dan menggunakan herba-herba tempatan bersama pakar alam kami.</p>
+                            <a href="#hubungi" class="text-green-600 font-semibold hover:underline">Daftar Sekarang →</a>
+                        </div>
+                    </div>
+                    <!-- Acara 2 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 duration-300">
+                        <img src="https://placehold.co/400x300/A5D6A7/FFFFFF?text=Gotong-Royong" alt="Gotong-Royong" class="h-56 w-full object-cover">
+                        <div class="p-6 text-left">
+                            <span class="text-sm font-semibold text-green-600">KOMUNITI | 22 NOV 2025</span>
+                            <h3 class="text-xl font-semibold my-2">Gotong-Royong Bersih Sungai</h3>
+                            <p class="text-gray-600 mb-4">Sertai kami membersihkan tebing sungai kita. Sarapan dan alatan disediakan.</p>
+                            <a href="#hubungi" class="text-green-600 font-semibold hover:underline">Sertai Kami →</a>
+                        </div>
+                    </div>
+                    <!-- Acara 3 -->
+                    <div class="bg-white rounded-xl shadow-lg overflow-hidden transform transition hover:scale-105 duration-300">
+                        <img src="https://placehold.co/400x300/C8E6C9/FFFFFF?text=Larian+Denai" alt="Larian Denai" class="h-56 w-full object-cover">
+                        <div class="p-6 text-left">
+                            <span class="text-sm font-semibold text-green-600">ACARA | 5 DIS 2025</span>
+                            <h3 class="text-xl font-semibold my-2">Larian Denai Hulu Langat 5KM</h3>
+                            <p class="text-gray-600 mb-4">Cabar diri anda dengan larian merentasi denai hutan kami yang indah.</p>
+                            <a href="#hubungi" class="text-green-600 font-semibold hover:underline">Ketahui Lanjut →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bahagian Perancang Aktiviti AI (BARU DENGAN GEMINI API) -->
+        <section id="ai-planner" class="py-20 px-6 bg-white">
+            <div class="container mx-auto max-w-3xl text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">✨ Perancang Aktiviti AI Kami</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-8">
+                    Tak pasti nak buat apa? Beritahu kami minat anda (cth: bilangan orang, jenis aktiviti, tempoh masa), dan biarkan AI kami merancang hari anda di Hulu Langat!
+                </p>
+                
+                <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
+                    <textarea id="ai-prompt" class="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none transition mb-4" rows="4" placeholder="Cth: Kami 2 dewasa & 2 kanak-kanak, suka aktiviti air dan santai. Apa cadangan untuk 3 jam?"></textarea>
+                    
+                    <button id="plan-btn" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg text-lg transition duration-300 shadow-lg flex items-center justify-center">
+                        Jana Cadangan Aktiviti
+                    </button>
+                    
+                    <!-- Paparan Hasil & Loading -->
+                    <div id="ai-result-container" class="mt-6 text-left p-6 bg-gray-50 rounded-lg border border-gray-200" style="display: none;">
+                        <!-- Loader akan muncul di sini -->
+                        <div id="ai-loader" class="flex flex-col items-center justify-center" style="display: none;">
+                            <div class="loader"></div>
+                            <p class="text-gray-600 mt-3">AI sedang merancang jadual anda...</p>
+                        </div>
+                        <!-- Hasil akan muncul di sini -->
+                        <div id="ai-result-text" class="text-gray-800 prose"></div>
+                        <!-- Mesej Ralat akan muncul di sini -->
+                        <div id="ai-error-text" class="text-red-600" style="display: none;"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Bahagian Produk & Tempahan (BARU) -->
+        <section id="produk" class="py-20 px-6 bg-gray-50"> <!-- Tukar ke bg-gray-50 -->
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Produk & Tempahan Lawatan</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    <!-- Bahagian Produk -->
+                    <div>
+                        <img src="https://placehold.co/600x400/388E3C/FFFFFF?text=Produk+Tempatan" alt="Produk Tempatan" class="rounded-xl shadow-lg w-full mb-6">
+                        <h3 class="text-2xl font-semibold mb-3">Sokong Produk Komuniti Tempatan</h3>
+                        <p class="text-gray-700 text-lg mb-4">
+                            Dapatkan hasil kraftangan, madu kelulut asli, dan produk-produk unik lain yang dihasilkan oleh komuniti setempat. Setiap pembelian anda membantu ekonomi lokal.
+                        </p>
+                        <a href="#hubungi" class="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-md">
+                            Lihat Produk
+                        </a>
+                    </div>
+                    
+                    <!-- Bahagian Tempahan -->
+                    <div>
+                        <img src="https://placehold.co/600x400/689F38/FFFFFF?text=Tempah+Lawatan" alt="Tempah Lawatan" class="rounded-xl shadow-lg w-full mb-6">
+                        <h3 class="text-2xl font-semibold mb-3">Rancang Lawatan Anda</h3>
+                        <p class="text-gray-700 text-lg mb-4">
+                            Tempah pemandu pelancong alam (nature guide), tapak perkelahan eksklusif, atau pakej lawatan berkumpulan. Hubungi kami untuk merancang pengalaman anda.
+                        </p>
+                        <a href="#hubungi" class="bg-gray-800 hover:bg-gray-900 text-white font-bold py-3 px-6 rounded-lg transition duration-300 shadow-md">
+                            Tempah Sekarang
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Bahagian Galeri -->
+        <section id="galeri" class="py-20 px-6 bg-gray-50">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-12">Galeri Keindahan Hulu Langat</h2>
+                
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <img src="https://placehold.co/400x400/9CCC65/FFFFFF?text=Sungai" alt="Pemandangan sungai" class="rounded-xl shadow-md object-cover w-full h-48 md:h-64 hover:opacity-80 transition duration-300 cursor-pointer">
+                    <img src="https://placehold.co/400x400/8BC34A/FFFFFF?text=Air+Terjun" alt="Pemandangan air terjun" class="rounded-xl shadow-md object-cover w-full h-48 md:h-64 hover:opacity-80 transition duration-300 cursor-pointer">
+                    <img src="https://placehold.co/400x400/7CB342/FFFFFF?text=Denai+Hutan" alt="Pemandangan denai hutan" class="rounded-xl shadow-md object-cover w-full h-48 md:h-64 hover:opacity-80 transition duration-300 cursor-pointer">
+                    <img src="https://placehold.co/400x400/689F38/FFFFFF?text=Pokok" alt="Pemandangan pokok" class="rounded-xl shadow-md object-cover w-full h-48 md:h-64 hover:opacity-80 transition duration-300 cursor-pointer">
+                    <img src="https://placehold.co/400x400/558B2F/FFFFFF?text=Kawasan+Berkelah" alt="Kawasan berkelah" class="rounded-xl shadow-md object-cover w-full h-48 md:h-64 hover:opacity-80 transition duration-300 cursor-pointer">
+                    <img src="https://placehold.co/400x400/388E3C/FFFFFF?text=Aktiviti" alt="Aktiviti komuniti" class="rounded-xl shadow-md object-cover w-full h-48 md:h-64 hover:opacity-80 transition duration-300 cursor-pointer">
+                    <img src="https://placehold.co/400x400/2E7D32/FFFFFF?text=Fauna" alt="Fauna tempatan" class="rounded-xl shadow-md object-cover w-full h-48 md:h-64 hover:opacity-80 transition duration-300 cursor-pointer">
+                    <img src="https://placehold.co/400x400/1B5E20/FFFFFF?text=Matahari+Terbenam" alt="Matahari terbenam" class="rounded-xl shadow-md object-cover w-full h-48 md:h-64 hover:opacity-80 transition duration-300 cursor-pointer">
+                </div>
+            </div>
+        </section>
+
+        <!-- Bahagian Rakan Kongsi Kami (BARU) -->
+        <section id="rakan-kongsi" class="py-20 px-6 bg-white">
+            <div class="container mx-auto text-center">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Rakan Kongsi & Penyokong Kami</h2>
+                <p class="text-lg text-gray-700 max-w-2xl mx-auto mb-12">Kejayaan kami tidak mungkin tercapai tanpa sokongan padu daripada rakan-rakan korporat dan agensi kerajaan.</p>
+                
+                <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-8">
+                    <!-- Logo Rakan Kongsi (Placeholder) -->
+                    <img src="https://placehold.co/150x80/BDBDBD/FFFFFF?text=Logo+Rakan+1" alt="Logo Rakan Kongsi 1" class="h-16 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300">
+                    <img src="https://placehold.co/150x80/BDBDBD/FFFFFF?text=Logo+Rakan+2" alt="Logo Rakan Kongsi 2" class="h-16 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300">
+                    <img src="https://placehold.co/150x80/BDBDBD/FFFFFF?text=Logo+Rakan+3" alt="Logo Rakan Kongsi 3" class="h-16 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300">
+                    <img src="https://placehold.co/150x80/BDBDBD/FFFFFF?text=Logo+Rakan+4" alt="Logo Rakan Kongsi 4" class="h-16 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300">
+                    <img src="https://placehold.co/150x80/BDBDBD/FFFFFF?text=Logo+Rakan+5" alt="Logo Rakan Kongsi 5" class="h-16 opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition duration-300">
+                </div>
+            </div>
+        </section>
+
+        <!-- Bahagian Hubungi Kami -->
+        <section id="hubungi" class="py-20 px-6 bg-gray-50"> <!-- Tukar dari bg-white ke bg-gray-50 -->
+            <div class="container mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12">Hubungi Kami</h2>
+                
+                <div class="md:flex md:space-x-12">
+                    <!-- Borang Hubungi -->
+                    <form class="md:w-1/2 space-y-4">
+                        <div>
+                            <label for="name" class="sr-only">Nama</label>
+                            <input type="text" id="name" placeholder="Nama Penuh Anda" class="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label for="email" class="sr-only">Emel</label>
+                            <input type="email" id="email" placeholder="Alamat Emel Anda" class="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none transition">
+                        </div>
+                        <div>
+                            <label for="message" class="sr-only">Mesej</label>
+                            <textarea id="message" rows="6" placeholder="Mesej Anda..." class="w-full p-4 rounded-lg border border-gray-300 focus:ring-2 focus:ring-green-500 focus:outline-none transition"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-lg text-lg transition duration-300 shadow-lg">
+                            Hantar Mesej
+                        </button>
+                    </form>
+                    
+                    <!-- Maklumat Hubungan -->
+                    <div class="md:w-1/2 mt-10 md:mt-0">
+                        <h3 class="text-2xl font-semibold mb-4">Maklumat Perhubungan</h3>
+                        <p class="text-lg text-gray-700 mb-4">
+                            Kami sedia maklum balas, pertanyaan, atau cadangan kolaborasi.
+                        </p>
+                        <div class="space-y-4">
+                            <p class="flex items-center text-lg">
+                                <svg class="w-6 h-6 text-green-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                                Dataran Rekreasi Batu 18, Hulu Langat, Selangor
+                            </p>
+                            <p class="flex items-center text-lg">
+                                <svg class="w-6 h-6 text-green-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91A2.25 2.25 0 012.25 6.993v-.243z" /></svg>
+                                info@ecohululangat.my
+                            </p>
+                            <p class="flex items-center text-lg">
+                                <svg class="w-6 h-6 text-green-600 mr-3" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.211-.992-.55-1.33l-2.96-2.96c-.34-.34-.824-.433-1.25-.27A13.487 13.487 0 0112 15c-2.418 0-4.68-.668-6.6-1.84a13.487 13.487 0 01-1.928-2.18c-.162-.426-.07-.91.27-1.25l2.96-2.96c.34-.34.815-.55 1.33-.55H8.25a2.25 2.25 0 00-2.25-2.25H3.75A2.25 2.25 0 001.5 6.75v.75c0 8.284 6.716 15 15 15h.75a2.25 2.25 0 002.25-2.25v-3.75z" /></svg>
+                                +60 3-1234 5678
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-10 px-6">
+        <div class="container mx-auto text-center">
+            <p class="mb-4">&copy; 2025 Hak Cipta Terpelihara. EcoHuluLangat (Nama Korporat Anda).</p>
+            <div class="flex justify-center space-x-6">
+                <a href="#" class="hover:text-white">Facebook</a>
+                <a href="#" class="hover:text-white">Instagram</a>
+                <a href="#" class="hover:text-white">Twitter</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Skrip untuk Menu Mudah Alih -->
+    <script>
+        document.getElementById('menu-btn').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('hidden');
+        });
+
+        // Tutup menu mudah alih apabila pautan diklik
+        document.querySelectorAll('#menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('menu').classList.add('hidden');
+            });
+        });
+
+        // --- SKRIP UNTUK GEMINI API ---
+
+        const planBtn = document.getElementById('plan-btn');
+        const aiPromptInput = document.getElementById('ai-prompt');
+        const resultContainer = document.getElementById('ai-result-container');
+        const aiLoader = document.getElementById('ai-loader');
+        const aiResultText = document.getElementById('ai-result-text');
+        const aiErrorText = document.getElementById('ai-error-text');
+
+        // Fungsi fetch dengan retry (exponential backoff)
+        async function fetchWithRetry(url, options, retries = 3, delay = 1000) {
+            try {
+                const response = await fetch(url, options);
+                if (!response.ok) {
+                    // Hanya retry jika ralat pelayan atau had kadar (cth: 500, 503, 429)
+                    if ((response.status >= 500 || response.status === 429) && retries > 0) {
+                        // Jangan log retry ke konsol
+                        await new Promise(resolve => setTimeout(resolve, delay));
+                        return fetchWithRetry(url, options, retries - 1, delay * 2);
+                    }
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                return response.json();
+            } catch (error) {
+                if (retries > 0) {
+                    // Jangan log retry ke konsol
+                    await new Promise(resolve => setTimeout(resolve, delay));
+                    return fetchWithRetry(url, options, retries - 1, delay * 2);
+                }
+                // Log ralat akhir jika semua percubaan gagal
+                console.error("Gagal menghubungi API selepas beberapa percubaan:", error);
+                throw error;
+            }
+        }
+
+        planBtn.addEventListener('click', async () => {
+            const userQuery = aiPromptInput.value;
+            if (!userQuery) {
+                aiErrorText.textContent = "Sila masukkan minat anda di dalam kotak teks.";
+                aiErrorText.style.display = 'block';
+                resultContainer.style.display = 'block';
+                aiResultText.style.display = 'none';
+                aiLoader.style.display = 'none';
+                return;
+            }
+
+            // Tunjukkan loader dan sembunyikan mesej lama
+            resultContainer.style.display = 'block';
+            aiLoader.style.display = 'flex';
+            aiResultText.style.display = 'none';
+            aiErrorText.style.display = 'none';
+            planBtn.disabled = true;
+            planBtn.textContent = 'Menjana...';
+
+            // Sistem prompt untuk membimbing AI
+            const systemPrompt = `Anda ialah pembantu maya yang peramah untuk Dataran Rekreasi Batu 18, Hulu Langat. Anda pakar dalam merancang aktiviti eko-pelancongan. 
+            Berdasarkan minat pengguna, jana cadangan jadual perjalanan (itinerary) yang kreatif dan terperinci. 
+            Sentiasa galakkan aktiviti mampan dan sebut aktiviti spesifik yang terdapat di sini seperti 'jungle trekking' (jelajah denai), 'mandi sungai' di kawasan yang selamat, 'berkelah', 'pemerhatian burung', dan 'menyokong produk komuniti' tempatan.
+            Pastikan jawapan anda dalam Bahasa Melayu. Format jawapan dengan baik menggunakan perenggan dan senarai (bullet points) untuk mudah dibaca.
+            Mulakan dengan sapaan mesra.`;
+
+            const apiKey = ""; // API key akan diuruskan oleh persekitaran
+            const apiUrl = `https://generativelangugage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+            const payload = {
+                contents: [{
+                    parts: [{ text: userQuery }]
+                }],
+                systemInstruction: {
+                    parts: [{ text: systemPrompt }]
+                },
+            };
+
+            try {
+                const result = await fetchWithRetry(apiUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                const candidate = result.candidates?.[0];
+                if (candidate && candidate.content?.parts?.[0]?.text) {
+                    const generatedText = candidate.content.parts[0].text;
+                    // Ganti newline dengan <br> untuk paparan HTML
+                    aiResultText.innerHTML = generatedText.replace(/\n/g, '<br>');
+                    aiResultText.style.display = 'block';
+                } else {
+                    throw new Error("Format respons tidak sah.");
+                }
+
+            } catch (error) {
+                console.error('Ralat API Gemini:', error);
+                aiErrorText.textContent = 'Maaf, berlaku ralat semasa menjana cadangan. Sila cuba lagi sebentar lagi.';
+                aiErrorText.style.display = 'block';
+            } finally {
+                // Sembunyikan loader dan aktifkan semula butang
+                aiLoader.style.display = 'none';
+                planBtn.disabled = false;
+                planBtn.textContent = 'Jana Cadangan Aktiviti';
+            }
+        });
+    </script>
+
+</body>
+</html>
+
